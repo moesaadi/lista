@@ -107,7 +107,8 @@ class ToDoListViewController: UITableViewController {
     
     func loadItems() {
 //        sort tgdr tl3b feha etha ma teba t5leha trteb abjdi- mn keesi but will try
-        todoItems = selectedCategory?.items.sorted(byKeyPath: "title", ascending: true)
+        
+        todoItems = selectedCategory?.items.sorted(byKeyPath: "title", ascending: false)
         
         tableView.reloadData()
     }
