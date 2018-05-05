@@ -18,12 +18,29 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="7yn-wA-fPK" customClass="SwipeTableViewCell" customModule="SwipeCellKit">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="80" id="7yn-wA-fPK" customClass="SwipeTableViewCell" customModule="SwipeCellKit">
+                                <rect key="frame" x="0.0" y="28" width="375" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7yn-wA-fPK" id="HfZ-uK-BKJ">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="xCT-bj-KcH" userLabel="viewCell">
+                                            <rect key="frame" x="10" y="5" width="355" height="70"/>
+                                            <color key="backgroundColor" red="0.20784313725490194" green="0.22745098039215686" blue="0.24313725490196078" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                    <integer key="value" value="25"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="xCT-bj-KcH" secondAttribute="bottom" constant="5" id="1I1-jE-obd"/>
+                                        <constraint firstAttribute="trailing" secondItem="xCT-bj-KcH" secondAttribute="trailing" constant="10" id="5Co-jA-t9d"/>
+                                        <constraint firstItem="xCT-bj-KcH" firstAttribute="top" secondItem="HfZ-uK-BKJ" secondAttribute="top" constant="5" id="I3T-in-BLE"/>
+                                        <constraint firstItem="xCT-bj-KcH" firstAttribute="leading" secondItem="HfZ-uK-BKJ" secondAttribute="leading" constant="10" id="ofT-Sa-p64"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableViewCell>
@@ -64,6 +81,23 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eWx-Ei-dHl" id="6Oc-WG-6lb">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pgg-kT-Fao">
+                                            <rect key="frame" x="10" y="5" width="355" height="34"/>
+                                            <color key="backgroundColor" red="0.20784313725490194" green="0.22745098039215686" blue="0.24313725490196078" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                    <integer key="value" value="25"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Pgg-kT-Fao" firstAttribute="leading" secondItem="6Oc-WG-6lb" secondAttribute="leading" constant="10" id="0cW-sS-cg4"/>
+                                        <constraint firstAttribute="bottom" secondItem="Pgg-kT-Fao" secondAttribute="bottom" constant="5" id="ZBf-oZ-6nw"/>
+                                        <constraint firstItem="Pgg-kT-Fao" firstAttribute="top" secondItem="6Oc-WG-6lb" secondAttribute="top" constant="5" id="k1u-B1-Hpi"/>
+                                        <constraint firstAttribute="trailing" secondItem="Pgg-kT-Fao" secondAttribute="trailing" constant="10" id="uAP-ta-2Xr"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </tableViewCell>

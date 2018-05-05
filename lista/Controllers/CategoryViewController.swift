@@ -42,6 +42,10 @@ class CategoryViewController: SwipeTableViewController {
         cell.textLabel!.textColor = UIColor.white
         cell.backgroundColor = .clear
         
+//        let viewCell = super.tableView(tableView, cellForRowAt: indexPath)
+        
+        
+        
         return cell
         
     }
