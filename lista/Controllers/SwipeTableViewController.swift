@@ -19,11 +19,29 @@ class SwipeTableViewController: UITableViewController, SwipeTableViewCellDelegat
         tableView.rowHeight = 80.0
         
     }
+    
+//    background test
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
+        let backgroundImage = UIImage(named: "black.png")
+        let imageView = UIImageView(image: backgroundImage)
+        //        imageView.alpha = 0.3
+        self.tableView.backgroundView = imageView
+        
+        
+    }
+    
+
+    
+    
 //        TableView Datasource Methods
         
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! SwipeTableViewCell
+        
+//        cell coloring not written
+        
 
         
         cell.delegate = self

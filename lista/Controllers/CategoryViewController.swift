@@ -39,9 +39,14 @@ class CategoryViewController: SwipeTableViewController {
         
         cell.textLabel?.text = categories?[indexPath.row].name ?? "No Categories Added Yet"
         
+        cell.textLabel!.textColor = UIColor.white
+        cell.backgroundColor = .clear
+        
         return cell
         
     }
+    
+    
     
     
     //    MARK: TableView Delegate Methods

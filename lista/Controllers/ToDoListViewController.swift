@@ -47,6 +47,9 @@ class ToDoListViewController: SwipeTableViewController {
             cell.textLabel?.text = "No Items Added"
         }
         
+        cell.textLabel!.textColor = UIColor.white
+        cell.backgroundColor = .clear
+        
         return cell
     }
     
