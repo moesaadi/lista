@@ -41,6 +41,10 @@ class CategoryViewController: SwipeTableViewController {
         
         cell.textLabel!.textColor = UIColor.white
         cell.backgroundColor = .clear
+        cell.selectionStyle = .none
+        cell.backgroundView = UIImageView(image: UIImage(named: "cellCategory.png"))
+        
+        
         
 //        let viewCell = super.tableView(tableView, cellForRowAt: indexPath)
         

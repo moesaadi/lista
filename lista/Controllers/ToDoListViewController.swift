@@ -53,6 +53,7 @@ class ToDoListViewController: SwipeTableViewController {
         
         cell.textLabel!.textColor = UIColor.white
         cell.backgroundColor = .clear
+        cell.selectionStyle = .none
         
         return cell
     }
