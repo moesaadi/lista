@@ -27,7 +27,6 @@ class ToDoListViewController: SwipeTableViewController {
         
         print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
         
-        
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -42,9 +41,14 @@ class ToDoListViewController: SwipeTableViewController {
             
             cell.textLabel?.text = item.title
             
-            cell.accessoryType = item.done ? .checkmark : .none
+            cell.backgroundView = item.done ? UIImageView(image: UIImage(named: "cellChecked.png"))
+ : UIImageView(image: UIImage(named: "cellUnchecked.png"))
+
+            
+//            cell.accessoryType = item.done ? .checkmark : .none
         } else {
             cell.textLabel?.text = "No Items Added"
+            
         }
         
         cell.textLabel!.textColor = UIColor.white
@@ -58,6 +62,7 @@ class ToDoListViewController: SwipeTableViewController {
         if let item = todoItems?[indexPath.row] {
             do {
                 try realm.write {
+                    
                     item.done = !item.done
                 }
             } catch {
@@ -111,7 +116,7 @@ class ToDoListViewController: SwipeTableViewController {
     func loadItems() {
 //        sort tgdr tl3b feha etha ma teba t5leha trteb abjdi- mn keesi but will try
         
-        todoItems = selectedCategory?.items.sorted(byKeyPath: "title", ascending: false)
+        todoItems = selectedCategory?.items.sorted(byKeyPath: "title", ascending: true)
         
         tableView.reloadData()
     }
