@@ -8,15 +8,27 @@
 
 import UIKit
 import RealmSwift
+import AVFoundation
 
 class CategoryViewController: SwipeTableViewController {
     
     let realm = try! Realm()
     
+//    var player:AVAudioPlayer = AVAudioPlayer()
+    
     var categories: Results<Category>?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+//        do {
+//            let audioPath = Bundle.main.path(forResource: "checkedSound", ofType: "mp3")
+//            try player = AVAudioPlayer(contentsOf: NSURL(fileURLWithPath: audioPath!)as URL)
+//        } catch {
+//            print("Error playing sound, \(error)")
+//        }
+//        player.play()
         
         loadCategories()
         
@@ -42,7 +54,7 @@ class CategoryViewController: SwipeTableViewController {
         cell.textLabel!.textColor = UIColor.white
         cell.backgroundColor = .clear
         cell.selectionStyle = .none
-        cell.backgroundView = UIImageView(image: UIImage(named: "cellCategory.png"))
+        cell.backgroundView = UIImageView(image: UIImage(named: "cellCategory1.png"))
         
         
         
@@ -61,6 +73,8 @@ class CategoryViewController: SwipeTableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "goToItems", sender: self)
+
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

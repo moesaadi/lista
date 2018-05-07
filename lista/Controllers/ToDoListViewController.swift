@@ -8,8 +8,11 @@
 
 import UIKit
 import RealmSwift
+import AVFoundation
 
 class ToDoListViewController: SwipeTableViewController {
+    
+    var player:AVAudioPlayer = AVAudioPlayer()
     
     var todoItems: Results<Item>?
     let realm = try! Realm()
@@ -36,13 +39,15 @@ class ToDoListViewController: SwipeTableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = super.tableView(tableView, cellForRowAt: indexPath)
+    
         
         if let item = todoItems?[indexPath.row] {
             
             cell.textLabel?.text = item.title
             
-            cell.backgroundView = item.done ? UIImageView(image: UIImage(named: "cellChecked.png"))
- : UIImageView(image: UIImage(named: "cellUnchecked.png"))
+            cell.backgroundView = item.done ? UIImageView(image: UIImage(named: "cellChecked1.png")) : UIImageView(image: UIImage(named: "cellUnchecked1.png"))
+            
+            
 
             
 //            cell.accessoryType = item.done ? .checkmark : .none
@@ -51,14 +56,21 @@ class ToDoListViewController: SwipeTableViewController {
             
         }
         
+        
+        
         cell.textLabel!.textColor = UIColor.white
+        cell.textLabel!.font = UIFont(name: "Lato-Light", size: 20)
+        cell.textLabel!.addCharacterSpacing()
         cell.backgroundColor = .clear
         cell.selectionStyle = .none
+        
+        
         
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
         
         if let item = todoItems?[indexPath.row] {
             do {
@@ -74,7 +86,17 @@ class ToDoListViewController: SwipeTableViewController {
         tableView.reloadData()
         
         tableView.deselectRow(at: indexPath, animated: true)
+        
+        do {
+            let audioPath = Bundle.main.path(forResource: "checkedSound", ofType: "mp3")
+            try player = AVAudioPlayer(contentsOf: NSURL(fileURLWithPath: audioPath!)as URL)
+        } catch {
+            print("Error playing sound, \(error)")
+        }
+    player.play()
     }
+
+    
     
     // MARK - Add New Items
     
@@ -135,8 +157,16 @@ class ToDoListViewController: SwipeTableViewController {
     }
     
 }
-
-
+//changing kern, value:"5" will change the letter spacing
+extension UILabel {
+    func addCharacterSpacing() {
+        if let labelText = text, labelText.count > 0 {
+            let attributedString = NSMutableAttributedString(string: labelText)
+            attributedString.addAttribute(NSAttributedStringKey.kern, value: 3, range: NSRange(location: 0, length: attributedString.length - 1))
+            attributedText = attributedString
+        }
+    }
+}
 
 
 

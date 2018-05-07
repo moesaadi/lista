@@ -16,6 +16,13 @@
 		54BAEFE0209D3AF000F8D8AF /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BAEFDF209D3AF000F8D8AF /* Item.swift */; };
 		54BAEFE2209D3B0000F8D8AF /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BAEFE1209D3B0000F8D8AF /* Category.swift */; };
 		54BAEFE4209DCBBA00F8D8AF /* SwipeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BAEFE3209DCBBA00F8D8AF /* SwipeTableViewController.swift */; };
+		54F50239209FB437000AA2F4 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F50238209FB437000AA2F4 /* AVFoundation.framework */; };
+		54F5023D20A069B2000AA2F4 /* note1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 54F5023C20A069B2000AA2F4 /* note1.wav */; };
+		54F5024020A06A79000AA2F4 /* checkedSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 54F5023F20A06A79000AA2F4 /* checkedSound.mp3 */; };
+		54F5024220A0A2D8000AA2F4 /* Lato-Hairline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 54F5024120A0A29F000AA2F4 /* Lato-Hairline.ttf */; };
+		54F5024520A0A6A6000AA2F4 /* Lato-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 54F5024320A0A683000AA2F4 /* Lato-Thin.ttf */; };
+		54F5024720A10BBC000AA2F4 /* Directory.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 54F5024620A10BBC000AA2F4 /* Directory.ttf */; };
+		54F5024920A10FC0000AA2F4 /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 54F5024820A10FC0000AA2F4 /* Lato-Light.ttf */; };
 		8B62C82937E57945505304DC /* Pods_lista.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14FCEF10FF692A7AF3B62213 /* Pods_lista.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +39,13 @@
 		54BAEFDF209D3AF000F8D8AF /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		54BAEFE1209D3B0000F8D8AF /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		54BAEFE3209DCBBA00F8D8AF /* SwipeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeTableViewController.swift; sourceTree = "<group>"; };
+		54F50238209FB437000AA2F4 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		54F5023C20A069B2000AA2F4 /* note1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = note1.wav; sourceTree = "<group>"; };
+		54F5023F20A06A79000AA2F4 /* checkedSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = checkedSound.mp3; sourceTree = "<group>"; };
+		54F5024120A0A29F000AA2F4 /* Lato-Hairline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Hairline.ttf"; sourceTree = "<group>"; };
+		54F5024320A0A683000AA2F4 /* Lato-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Thin.ttf"; sourceTree = "<group>"; };
+		54F5024620A10BBC000AA2F4 /* Directory.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Directory.ttf; sourceTree = "<group>"; };
+		54F5024820A10FC0000AA2F4 /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Light.ttf"; sourceTree = "<group>"; };
 		99B26D0C453FE58CD081912A /* Pods-lista.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lista.release.xcconfig"; path = "Pods/Target Support Files/Pods-lista/Pods-lista.release.xcconfig"; sourceTree = "<group>"; };
 		F345C3E0BA8BCBFE9C74925C /* Pods-lista.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lista.debug.xcconfig"; path = "Pods/Target Support Files/Pods-lista/Pods-lista.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -41,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54F50239209FB437000AA2F4 /* AVFoundation.framework in Frameworks */,
 				8B62C82937E57945505304DC /* Pods_lista.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -73,6 +88,9 @@
 				54E2F308209D277B0085DFB2 /* Controllers */,
 				54E2F30A209D27BF0085DFB2 /* Views */,
 				54E2F30B209D27CC0085DFB2 /* Supporting Files */,
+				54F5023F20A06A79000AA2F4 /* checkedSound.mp3 */,
+				54F5023C20A069B2000AA2F4 /* note1.wav */,
+				54F5024420A0A692000AA2F4 /* Fonts */,
 				54169983209D1DA0003CFD1F /* Info.plist */,
 			);
 			path = lista;
@@ -115,6 +133,17 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		54F5024420A0A692000AA2F4 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				54F5024620A10BBC000AA2F4 /* Directory.ttf */,
+				54F5024820A10FC0000AA2F4 /* Lato-Light.ttf */,
+				54F5024320A0A683000AA2F4 /* Lato-Thin.ttf */,
+				54F5024120A0A29F000AA2F4 /* Lato-Hairline.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		5F901CCC166BF22274D0514E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +156,7 @@
 		88079503F456683D7E2E9ABB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				54F50238209FB437000AA2F4 /* AVFoundation.framework */,
 				14FCEF10FF692A7AF3B62213 /* Pods_lista.framework */,
 			);
 			name = Frameworks;
@@ -195,6 +225,12 @@
 			files = (
 				54169982209D1DA0003CFD1F /* LaunchScreen.storyboard in Resources */,
 				5416997F209D1DA0003CFD1F /* Assets.xcassets in Resources */,
+				54F5024520A0A6A6000AA2F4 /* Lato-Thin.ttf in Resources */,
+				54F5024920A10FC0000AA2F4 /* Lato-Light.ttf in Resources */,
+				54F5024220A0A2D8000AA2F4 /* Lato-Hairline.ttf in Resources */,
+				54F5023D20A069B2000AA2F4 /* note1.wav in Resources */,
+				54F5024020A06A79000AA2F4 /* checkedSound.mp3 in Resources */,
+				54F5024720A10BBC000AA2F4 /* Directory.ttf in Resources */,
 				5416997A209D1DA0003CFD1F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
