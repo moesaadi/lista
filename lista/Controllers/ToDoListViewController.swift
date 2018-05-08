@@ -20,6 +20,7 @@ class ToDoListViewController: SwipeTableViewController {
     var selectedCategory : Category? {
         didSet{
             loadItems()
+            
         }
     }
     
@@ -28,10 +29,16 @@ class ToDoListViewController: SwipeTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+
+    
+
+        
         print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
         
     }
+//
     
+//
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return todoItems?.count ?? 1
     }
@@ -39,13 +46,13 @@ class ToDoListViewController: SwipeTableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = super.tableView(tableView, cellForRowAt: indexPath)
-    
+        
         
         if let item = todoItems?[indexPath.row] {
             
             cell.textLabel?.text = item.title
             
-            cell.backgroundView = item.done ? UIImageView(image: UIImage(named: "cellChecked1.png")) : UIImageView(image: UIImage(named: "cellUnchecked1.png"))
+            cell.backgroundView = item.done ? UIImageView(image: UIImage(named: "CellChecked5.png")) : UIImageView(image: UIImage(named: "CellUnchecked5.png"))
             
             
 
@@ -157,12 +164,13 @@ class ToDoListViewController: SwipeTableViewController {
     }
     
 }
+
 //changing kern, value:"5" will change the letter spacing
 extension UILabel {
     func addCharacterSpacing() {
         if let labelText = text, labelText.count > 0 {
             let attributedString = NSMutableAttributedString(string: labelText)
-            attributedString.addAttribute(NSAttributedStringKey.kern, value: 3, range: NSRange(location: 0, length: attributedString.length - 1))
+            attributedString.addAttribute(NSAttributedStringKey.kern, value: 1.15, range: NSRange(location: 0, length: attributedString.length - 1))
             attributedText = attributedString
         }
     }

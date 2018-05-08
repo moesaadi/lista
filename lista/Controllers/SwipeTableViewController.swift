@@ -13,14 +13,17 @@ import AVFoundation
 class SwipeTableViewController: UITableViewController, SwipeTableViewCellDelegate, AVAudioPlayerDelegate {
     
     
-    
+    var deletesound:AVAudioPlayer = AVAudioPlayer()
     var cell:UITableViewCell?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+//        navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
 
+        
         tableView.rowHeight = 80.0
+        
         
     }
     
@@ -50,6 +53,7 @@ class SwipeTableViewController: UITableViewController, SwipeTableViewCellDelegat
         
         cell.delegate = self
         
+        
         return cell
     }
     
@@ -75,10 +79,16 @@ class SwipeTableViewController: UITableViewController, SwipeTableViewCellDelegat
         var options = SwipeTableOptions()
         options.expansionStyle = .destructive
         options.transitionStyle = .border
+        
+        
+        do {
+            let audioPath = Bundle.main.path(forResource: "deleteSoundW", ofType: "wav")
+            try deletesound = AVAudioPlayer(contentsOf: NSURL(fileURLWithPath: audioPath!)as URL)
+        } catch {
+            print("Error playing sound, \(error)")
+        }
+        deletesound.play()
         return options
-        
-        
-        
     }
     
     

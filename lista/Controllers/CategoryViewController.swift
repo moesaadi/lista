@@ -52,9 +52,10 @@ class CategoryViewController: SwipeTableViewController {
         cell.textLabel?.text = categories?[indexPath.row].name ?? "No Categories Added Yet"
         
         cell.textLabel!.textColor = UIColor.white
+        cell.textLabel!.font = UIFont(name: "Lato-Light", size: 20)
         cell.backgroundColor = .clear
         cell.selectionStyle = .none
-        cell.backgroundView = UIImageView(image: UIImage(named: "cellCategory1.png"))
+        cell.backgroundView = UIImageView(image: UIImage(named: "CellCategory5.png"))
         
         
         
@@ -82,6 +83,7 @@ class CategoryViewController: SwipeTableViewController {
         
         if let indexPath = tableView.indexPathForSelectedRow {
             destinationVC.selectedCategory = categories?[indexPath.row]
+            
         }
     }
     
