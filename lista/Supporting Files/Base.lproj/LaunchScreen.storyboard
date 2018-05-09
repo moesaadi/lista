@@ -28,7 +28,6 @@
                             <constraint firstAttribute="bottom" secondItem="LLe-Rv-zit" secondAttribute="bottom" id="NDK-hf-ma8"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="LLe-Rv-zit" secondAttribute="bottom" id="Q9X-7b-tCm"/>
                             <constraint firstItem="LLe-Rv-zit" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="aQx-vm-CVj"/>
-                            <constraint firstItem="LLe-Rv-zit" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="jlD-96-UBl"/>
                             <constraint firstItem="LLe-Rv-zit" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="s3b-ZJ-TSY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>

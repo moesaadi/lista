@@ -49,7 +49,7 @@
             </objects>
             <point key="canvasLocation" x="1044" y="118.96551724137932"/>
         </scene>
-        <!--Products-->
+        <!--To Do List View Controller-->
         <scene sceneID="9ft-Bc-TsQ">
             <objects>
                 <tableViewController id="1Ut-Xy-We4" customClass="ToDoListViewController" customModule="lista" customModuleProvider="target" sceneMemberID="viewController">
@@ -73,7 +73,7 @@
                             <outlet property="delegate" destination="1Ut-Xy-We4" id="AYD-7d-acZ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Products" id="y0H-Di-GGe">
+                    <navigationItem key="navigationItem" id="y0H-Di-GGe">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="1rI-0i-x06">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
@@ -91,7 +91,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DMc-rT-VDk" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8j2-gS-GUB">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="8j2-gS-GUB">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.31372549019607843" green="0.67843137254901964" blue="0.8901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
